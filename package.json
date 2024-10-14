@@ -1,0 +1,24 @@
+{
+  "name": "@kameleoon/netlify-edge-starter-kit",
+  "version": "1.0.0",
+  "main": "dist/functions/handler.js",
+  "description": "Kameleoon Netlify Edge Starter Kit",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && esbuild src/handler.ts --bundle --platform=node --minify --format=esm --outfile=dist/handler.js",
+    "dev": "npm run build && netlify dev",
+    "deploy": "netlify deploy --dir dist"
+  },
+  "author": "Kameleoon",
+  "license": "ISC",
+  "dependencies": {
+    "@kameleoon/nodejs-sdk": "^5.0.0"
+  },
+  "devDependencies": {
+    "@netlify/edge-functions": "^2.10.0",
+    "@types/node": "^22.5.3",
+    "esbuild": "^0.24.0",
+    "rimraf": "^4.1.2",
+    "typescript": "^4.9.5"
+  }
+}

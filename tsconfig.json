@@ -1,0 +1,14 @@
+{
+  "exclude": ["node_modules", "dist", ".netlify"],
+  "include": ["src/**/*", "src/handler.ts"],
+  "compilerOptions": {
+    "target": "es2020",
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
